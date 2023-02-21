@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Build Java Application') {
             steps {
-                sh "sudo mvn clean install package"
+                sh "mvn clean install package"
             }
         }
 
