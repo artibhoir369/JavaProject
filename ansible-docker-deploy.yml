@@ -1,0 +1,6 @@
+---
+  - become: true
+    hosts: all
+    tasks:
+      - name: "deploy docker image"
+        shell: "docker run -itd -p 80:8080 --name java-container artibhoir369/java-app"
