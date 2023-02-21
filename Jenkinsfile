@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    
+
     tools{
         maven "maven"
         jdk "jdk"
@@ -41,7 +41,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                sh "ansible-playbook create_docker_container.yml"
+                sh "ansible-playbook ansible-docker-deploy.yml"
             }
         }
     }
